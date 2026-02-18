@@ -29,4 +29,4 @@
 ├── deploy.sh            # Скрипт ручного деплоя
 └── README.md            # Этот файл
 ```
-
+lorem ipsum

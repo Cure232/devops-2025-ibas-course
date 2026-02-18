@@ -1,4 +1,4 @@
-name: HTML CI
+name: HTML CI LAB2
 
 on:
   push:
