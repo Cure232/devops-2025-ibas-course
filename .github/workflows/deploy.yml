@@ -30,10 +30,11 @@ jobs:
           scp -P ${{ secrets.SERVER_SSH_PORT }} \
             index.html \
             nginx.conf \
-           root@${{ secrets.SERVER_HOST }}:/tmp/
+           ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/tmp/
           
           # Выполняем deploy команды (вместо отдельного скрипта)
           ssh -p ${{ secrets.SERVER_SSH_PORT }} root@${{ secrets.SERVER_HOST }} << 'EOF'
+          
             # Создаем директорию
             sudo mkdir -p /var/www/demo
             
