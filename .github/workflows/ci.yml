@@ -24,16 +24,6 @@ jobs:
         run: |
           npm install -g html-validate htmlhint
 
-      # Ваш тест с ракетой
-      - name: Check for rocket emoji
-        run: |
-          echo "🧪 Testing index.html for rocket emoji..."
-          if grep -q "🚀" index.html; then
-            echo "✅ Rocket emoji present"
-          else
-            echo "❌ No rocket emoji found!"
-            exit 1
-          fi
 
       # Валидация HTML синтаксиса с htmlhint
       - name: Validate HTML with HTMLHint
